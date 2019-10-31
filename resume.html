@@ -13,11 +13,33 @@
         font-family: monospace;
     }
 
+    body {
+        background-color: #292D3E;
+        color: #A6ACCD;
+    }
+
+    .nav, .nav .current, .nav a:hover {
+        background-color: #676E95;
+    }
+
     h1 {
         margin: 0.2em 0;
         border-bottom: 5px solid;
         margin-bottom: 15px;
         padding-bottom: 5px;
+    }
+
+    #content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .alt-color {
+        color: red;
     }
     </style>
 </head>
@@ -46,16 +68,18 @@
     </script>
     <nav class="nav" tabindex="-1" onclick="this.focus()">
         <div class="container">
-            <a id="index-menu-item" class="pagename current" href="/">SUPER<span style="color: red">HAFIZH</span></a>
+            <a id="index-menu-item" class="pagename current" href="/">SUPER<span class="alt-color">HAFIZH</span></a>
             <a id="portofolio-menu-item" class="" href="portofolio.html">PORTOFOLIO</a>
             <a id="resume-menu-item" class="" href="resume.html">RESUME</a> 
         </div>
     </nav>
-    <button class="btn-close btn btn-sm">×</button>	<div id="content" class="container">
-		<h1>Resume</h1>
-        <p></p>
+    <button class="btn-close btn btn-sm">×</button>	<div id="content" class="container row">
+		<div class="col c6">
+			<h2>Resume</h2>
+	        <p>Passionate software developer, eager to learn anything about and around it, with reliable work result. 5 years PHP experience and 1+ years Laravel experience, but adaptive in any imperative programming language.</p>
+		</div>
     </div>
-    
+
     <script type="text/javascript">
 		setCurrentNav("resume-menu-item");
 	</script>
