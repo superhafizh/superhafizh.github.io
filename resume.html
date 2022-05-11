@@ -1,79 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="css/min.css">
-
-    <title>Superhafizh</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hafizh Ilman Aziz personal home page.">
-
-    <style>
-    html, * {
-        font-family: monospace;
-    }
-
-    body {
-        background-color: #292D3E;
-        color: #A6ACCD;
-    }
-
-    .nav, .nav .current, .nav a:hover {
-        background-color: #676E95;
-    }
-
-    h1 {
-        margin: 0.2em 0;
-        border-bottom: 5px solid;
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-    }
-
-    #content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .alt-color {
-        color: red;
-    }
-    </style>
-</head>
-<body>
-    <script type="text/javascript">
-    function resetActive()
-    {
-        var elements = document.getElementsByClassName("current");
-        
-        for (var i = elements.length - 1; i >= 0; i--) {
-            elements[i].classList.remove("current");
-        }
-    }
-
-    function setCurrentNav(element_id)
-    {
-        resetActive();
-
-        var element = document.getElementById(element_id);
-
-        var arr = element.className.split(" ");
-
-        if (element.className === "" || arr.indexOf(name) == -1)
-            element.className += " current";
-    }
-    </script>
-    <nav class="nav" tabindex="-1" onclick="this.focus()">
-        <div class="container">
-            <a id="index-menu-item" class="pagename current" href="/">SUPER<span class="alt-color">HAFIZH</span></a>
-            <a id="portofolio-menu-item" class="" href="portofolio.html">PORTOFOLIO</a>
-            <a id="resume-menu-item" class="" href="resume.html">RESUME</a> 
-        </div>
-    </nav>
-    <button class="btn-close btn btn-sm">×</button>	<div id="content" class="container row">
+<?php include 'partials/head.html' ?>
+	<div id="content" class="container row">
 		<div class="col c6">
 			<h2>Resume</h2>
 	        <p><span class="alt-color">Passionate</span> software developer, <span style="color: #89DDFF">eager to learn</span> anything about and around it, with <span style="color: #F78C6C">reliable</span> work result. 5 years <span style="color: #C3E88D">PHP</span> experience and 1+ years <span style="color: #89DDFF">Laravel</span> experience, but <span class="alt-color">adaptive</span> in any imperative programming language.</p>
@@ -83,5 +9,4 @@
     <script type="text/javascript">
 		setCurrentNav("resume-menu-item");
 	</script>
-</body>
-</html>
+<?php include 'partials/toe.html' ?>

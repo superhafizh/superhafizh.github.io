@@ -3,23 +3,27 @@
 <head>
     <link rel="stylesheet" href="css/min.css">
 
-    <title>Superhafizh</title>
+    <title>Hafizh Ilman Aziz</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hafizh Ilman Aziz personal home page.">
+    <meta name="description" content="Hafizh Ilman Aziz">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 
     <style>
     html, * {
-        font-family: monospace;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 
     body {
-        background-color: #292D3E;
-        color: #A6ACCD;
+        background-color: white;
+        color: #666;
     }
 
     .nav, .nav .current, .nav a:hover {
-        background-color: #676E95;
+        background-color: #3465a4;
     }
 
     h1 {
@@ -40,6 +44,22 @@
 
     .alt-color {
         color: red;
+    }
+
+    .cl-primary {
+        color: #3465a4;
+    }
+
+    .cl-secondary {
+        color: #069a2e;
+    }
+
+    .cl-inv-primary {
+        color: #ccc !important;
+    }
+
+    .cl-inv-primary:hover {
+        color: white !important;
     }
     </style>
 </head>
@@ -68,15 +88,15 @@
     </script>
     <nav class="nav" tabindex="-1" onclick="this.focus()">
         <div class="container">
-            <a id="index-menu-item" class="pagename current" href="/">SUPER<span class="alt-color">HAFIZH</span></a>
-            <a id="portofolio-menu-item" class="" href="portofolio.html">PORTOFOLIO</a>
-            <a id="resume-menu-item" class="" href="resume.html">RESUME</a> 
+            <a id="index-menu-item" class="pagename current" href="/">HOME</a>
+            <a id="portofolio-menu-item" class="cl-inv-primary" href="portofolio.html">PORTOFOLIO</a>
+            <a id="resume-menu-item" class="cl-inv-primary" href="resume.html">RESUME</a> 
         </div>
     </nav>
     <button class="btn-close btn btn-sm">×</button>    <div id="content" class="container">
         <h4>Hi, </h4>
-        <h3>I'm <span class="alt-color">Hafizh</span>,</h3>
-        <h4><span style="color: #C3E88D;">software developer</span>.</h4>
+        <h2>I'm <span class="cl-primary">Hafizh</span>,</h2>
+        <h4>full stack web developer.</h4>
     </div>
 
     <script type="text/javascript">
