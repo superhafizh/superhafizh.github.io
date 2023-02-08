@@ -1,106 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="css/min.css">
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-e4a56267.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-f06ca95b.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-a9b83dba.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-1d239b5f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-1fe41f9f.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-9d948aed.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-bded2db9.js"><!-- HEAD_svelte-1lq4rqf_START --><!-- HEAD_svelte-1lq4rqf_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
 
-    <title>Hafizh Ilman Aziz</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hafizh Ilman Aziz">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<div class="bg-neutral text-neutral-content"><div class="mx-auto navbar"><div class="navbar-start"><a href="/" class="btn btn-ghost text-lg">Superhafizh</a></div>
+        <div class="navbar-end"><ul class="menu menu-horizontal"><li><a href="/#portfolio-section" class="">Portfolio</a></li>
+                <li><a href="/#contact-section" class="">Contact</a></li>
+                <li><a href="https://github.com/superhafizh" target="_blank" rel="noreferrer"></a></li></ul></div></div></div>
 
-    <style>
-    html, * {
-        font-family: 'IBM Plex Sans', sans-serif;
-    }
+<div class="mx-auto"><section class="hero hero-height bg-base-200 mb-4 svelte-1fc7l4f" style="background-image: url(/images/codes.jpg)"><div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content"><div class="max-w-lg"><h1 class="text-6xl font-bold">Hi,</h1>
+            <h1 class="text-5xl font-bold">My name is Hafizh</h1>
+            <p class="mt-4">I am a fullstack developer.</p></div></div></section>
 
-    body {
-        background-color: white;
-        color: #666;
-    }
+<div class="max-w-4xl mx-auto"><section id="portfolio-section" class="py-8"><h2 class="text-3xl font-bold">Portfolio</h2>
+        <p class="pb-6">My recent projects.</p>
+        <div class="grid grid-cols-2 justify-items-center"><div class="card card-compact w-96 bg-base-100 shadow-xl"><figure><img src="/images/pasarin.jpg" alt="Pasarin"></figure>
+                <div class="card-body"><h2 class="card-title">Pasarin</h2>
+                  <p>Pasarin was a marketplace targeting Facebook users. I was working with the Front End team using VueJs.</p>
+                  <p></p></div></div>
+            <div class="card card-compact w-96 bg-base-100 shadow-xl"><figure><img src="/images/kimulti.jpg" alt="Kimulti"></figure>
+                <div class="card-body"><h2 class="card-title">Kimulti</h2>
+                  <p>Kimulti is an ERP for a logistics company. I built from ground up using Laravel and Livewire.</p>
+                  <p>Currently it covers CRM, Shipment, and Accounting functionality with Assets Management and others still underway.</p></div></div></div></section>
 
-    .nav, .nav .current, .nav a:hover {
-        background-color: #3465a4;
-    }
+    <section id="contact-section" class="py-8"><h2 class="text-3xl font-bold pb-6">Contact Me</h2>
+        <form class="form-control"><label class="label" for="email"><span class="label-text">Email</span></label>
+            <input type="email" name="email" class="input input-bordered">
+            <label class="label" for="message"><span class="label-text">Message</span></label>
+            <input name="message" class="input input-bordered">
+            <div class="py-4 px-4">
 
-    h1 {
-        margin: 0.2em 0;
-        border-bottom: 5px solid;
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-    }
+<div id="h-captcha-71"></div></div>
+            <button type="submit" class="btn">Send</button></form></section>
+</div></div>
 
-    #content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
 
-    .alt-color {
-        color: red;
-    }
+		<script type="module" data-sveltekit-hydrate="s7oo18">
+			import { start } from "./_app/immutable/start-a9b83dba.js";
 
-    .cl-primary {
-        color: #3465a4;
-    }
-
-    .cl-secondary {
-        color: #069a2e;
-    }
-
-    .cl-inv-primary {
-        color: #ccc !important;
-    }
-
-    .cl-inv-primary:hover {
-        color: white !important;
-    }
-    </style>
-</head>
-<body>
-    <script type="text/javascript">
-    function resetActive()
-    {
-        var elements = document.getElementsByClassName("current");
-        
-        for (var i = elements.length - 1; i >= 0; i--) {
-            elements[i].classList.remove("current");
-        }
-    }
-
-    function setCurrentNav(element_id)
-    {
-        resetActive();
-
-        var element = document.getElementById(element_id);
-
-        var arr = element.className.split(" ");
-
-        if (element.className === "" || arr.indexOf(name) == -1)
-            element.className += " current";
-    }
-    </script>
-    <nav class="nav" tabindex="-1" onclick="this.focus()">
-        <div class="container">
-            <a id="index-menu-item" class="pagename current" href="/">HOME</a>
-            <a id="portofolio-menu-item" class="cl-inv-primary" href="portofolio.html">PORTOFOLIO</a>
-            <a id="resume-menu-item" class="cl-inv-primary" href="resume.html">RESUME</a> 
-        </div>
-    </nav>
-    <button class="btn-close btn btn-sm">×</button>    <div id="content" class="container">
-        <h4>Hi, </h4>
-        <h2>I'm <span class="cl-primary">Hafizh</span>,</h2>
-        <h4>full stack web developer.</h4>
-    </div>
-
-    <script type="text/javascript">
-        setCurrentNav("index-menu-item");
-    </script>
-</body>
+			start({
+				assets: "",
+				env: {},
+				target: document.querySelector('[data-sveltekit-hydrate="s7oo18"]').parentNode,
+				version: "1675873900545",
+				hydrate: {
+					node_ids: [0, 2],
+					data: [null,null],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+	</body>
 </html>
