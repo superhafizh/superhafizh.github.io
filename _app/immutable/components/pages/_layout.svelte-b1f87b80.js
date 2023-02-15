@@ -167,7 +167,7 @@ function create_fragment(ctx) {
     },
     h() {
       attr(a0, "href", "/");
-      attr(a0, "class", "btn btn-ghost normal-case text-xl font-serif");
+      attr(a0, "class", "btn btn-ghost normal-case text-xl font-serif text-warning");
       attr(div0, "class", "navbar-start");
       attr(div1, "class", "navbar-center ");
       attr(a1, "href", "/#projects-section");
