@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, experience, toolkit } from '../data/site';
+import { getWork } from '../lib/work';
+
+const work = await getWork();
+---
+
+<Base>
+  <section class="hero" aria-labelledby="intro">
+    <p class="label">{site.name}</p>
+    <h1 id="intro">Full stack developer building <em>dependable</em> business software.</h1>
+    <p class="lede">
+      Since 2013 I've built core banking, ERP and legal-tech systems, mostly the internal tools a
+      business runs on every day. Today I work remotely with {site.currentOrg} in Singapore, adding
+      AI services to document and email workflows for law firms in Germany.
+    </p>
+    <ul class="meta label" role="list">
+      <li>{site.location}</li>
+      <li>Remote · {site.timezone}</li>
+      <li><span class="dot" aria-hidden="true"></span>Now at {site.currentOrg}</li>
+    </ul>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <h2 class="label" id="work-title">Selected work</h2>
+    <ol class="work-list" role="list">
+      {
+        work.map((entry) => (
+          <li>
+            <a class="work-item" href={`/work/${entry.id}/`}>
+              <span class="period mono">{entry.data.period}</span>
+              <div>
+                <h3>{entry.data.title}</h3>
+                <p class="summary">{entry.data.summary}</p>
+                <p class="stack mono">{entry.data.stack.join(' / ')}</p>
+              </div>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <h2 class="label" id="experience-title">Experience</h2>
+    <ol class="exp" role="list">
+      {
+        experience.map((job) => (
+          <li>
+            <span class="period mono">{job.period}</span>
+            <div>
+              <h3>{job.role}</h3>
+              <p class="org">{job.org}</p>
+              <ul>
+                {job.points.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="section" id="toolkit" aria-labelledby="toolkit-title">
+    <h2 class="label" id="toolkit-title">Toolkit</h2>
+    <dl class="toolkit">
+      {
+        toolkit.map((group) => (
+          <div>
+            <dt class="mono">{group.label}</dt>
+            <dd>
+              {group.items.map((item) => (
+                <span>{item}</span>
+              ))}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <h2 class="label" id="contact-title">Contact</h2>
+    <div>
+      <h3>Have a project or a role in mind?</h3>
+      <p>Email is the quickest way to reach me, in English or Indonesian.</p>
+      <a class="email" href={`mailto:${site.email}`}>{site.email}</a>
+      <ul class="links mono" role="list">
+        {
+          site.links.map((link) => (
+            <li>
+              <a href={link.href} rel="me">
+                {link.label} ↗
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>

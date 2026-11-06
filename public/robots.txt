@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://superhafizh.github.io/sitemap-index.xml
