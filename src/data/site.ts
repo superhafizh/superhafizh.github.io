@@ -13,7 +13,7 @@ export const site = {
   currentOrg: 'Schutze Web Engineering',
   links: [
     { label: 'GitHub', href: 'https://github.com/superhafizh' },
-    // { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-handle' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hafizh-ilman-aziz/' },
   ],
 };
 

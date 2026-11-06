@@ -1,6 +1,6 @@
 ---
-import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
 import { getWork, type Work } from '../../lib/work';
 
 export async function getStaticPaths() {
@@ -17,59 +17,10 @@ interface Props {
 }
 
 const { entry, next } = Astro.props;
-const { Content } = await render(entry);
-const d = entry.data;
 ---
 
-<Base title={d.title} description={d.summary} type="article">
-  <header class="case-head">
-    <a class="back mono" href="/#work">← All work</a>
-    <p class="eyebrow label">{d.org} · {d.period}</p>
-    <h1>{d.title}</h1>
-    <p class="lede">{d.summary}</p>
-    <dl class="facts">
-      <div>
-        <dt class="label">Role</dt>
-        <dd>{d.role}</dd>
-      </div>
-      <div>
-        <dt class="label">Company</dt>
-        <dd>{d.org}</dd>
-      </div>
-      <div>
-        <dt class="label">Period</dt>
-        <dd>{d.period}</dd>
-      </div>
-      <div>
-        <dt class="label">Stack</dt>
-        <dd>{d.stack.join(', ')}</dd>
-      </div>
-      {
-        d.link && (
-          <div>
-            <dt class="label">Link</dt>
-            <dd>
-              <a href={d.link}>{new URL(d.link).hostname} ↗</a>
-            </dd>
-          </div>
-        )
-      }
-    </dl>
-  </header>
-
-  <section class="section" aria-label="Case study">
-    <p class="label" aria-hidden="true">Case study</p>
-    <div class="prose">
-      <Content />
-    </div>
-  </section>
-
-  {
-    next.id !== entry.id && (
-      <a class="next" href={`/work/${next.id}/`}>
-        <span class="label">Next project</span>
-        <span class="title">{next.data.title} →</span>
-      </a>
-    )
-  }
+<Base title={entry.data.title} description={entry.data.summary} type="article">
+  <CaseStudy entry={entry} next={next}>
+    <a slot="before" class="back mono" href="/#work">← All work</a>
+  </CaseStudy>
 </Base>
