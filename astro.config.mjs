@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://superhafizh.github.io',
+  site: 'https://superhafizh.com',
   integrations: [sitemap()],
 });
